@@ -43,7 +43,7 @@ body {
 #primary-title {
     @include material-text("Display 4");
     
-    font-family: "Roboto Mono", "Fira Mono", "Droid Sans Mono", "Monaco", monospace;
+    font-family: $mono-font-family;
     text-align: center;
     padding: 0px;
     margin: 75px 0px;
@@ -136,6 +136,22 @@ body {
         margin: -16px;
         margin-bottom: 16px;
     }
+    
+    &.no-padding {
+        padding: 0px;
+        
+        section {
+            padding: 16px;
+        }
+    }
+    
+    section {
+        border-bottom: 1px solid $divider-color;
+        
+        &:last-child {
+            border-bottom: none;
+        }
+    }
 }
 
 #tab-bar {
@@ -152,6 +168,13 @@ body {
     
     &:focus, :focus {
         outline: none;
+    }
+    
+    a {
+        text-align: center;
+        line-height: 48px;
+        text-decoration: underline;
+        color: inherit;
     }
 }
 
@@ -181,8 +204,6 @@ body {
 
 .typography {
     @include material-text("Body");
-    
-    color: $primary-text-color;
 
     p {
         margin: {
@@ -286,10 +307,15 @@ body {
 
     b, strong {
         font-weight: bold;
+        
+        &.medium {
+            font-weight: 500;
+        }
     }
 
     code {
-        font-family: "Roboto Mono", "Droid Sans Mono", "Monaco", monospace;
+        @extend .mono;
+        
         background-color: #f5f5f5;
         border-radius: 2px;
         padding: 1px 4px;
@@ -316,4 +342,24 @@ body {
     ::selection {
         background-color: material-color("blue", "a100");
     }
+    
+    .no-margin {
+        margin: 0px;
+    }
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.mono {
+    font-family: $mono-font-family;
 }
