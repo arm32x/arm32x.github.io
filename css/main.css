@@ -131,7 +131,47 @@ body {
     .card section:last-child {
       border-bottom: none; }
 
-/* line 157, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 158, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+.projects-card section {
+  height: 32px;
+  position: relative; }
+
+/* line 163, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+.projects-card .right-buttons {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  height: 65px;
+  transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1); }
+  /* line 172, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  .projects-card .right-buttons a {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 20px;
+    height: 24px;
+    width: 24px;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 24px;
+    margin: 12.5px 0px;
+    transition: background-color 175ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer; }
+    /* line 184, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    .projects-card .right-buttons a:hover {
+      background: rgba(0, 0, 0, 0.2); }
+    /* line 188, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    .projects-card .right-buttons a i {
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      transform: translateY(-4px); }
+
+/* line 199, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+.projects-card section:hover .right-buttons {
+  opacity: 1; }
+
+/* line 203, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 #tab-bar {
   font-size: 14px;
   font-weight: 500;
@@ -140,25 +180,25 @@ body {
   margin-top: -48px;
   height: 48px;
   z-index: 2; }
-  /* line 165, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 211, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   header.scrolled + #tab-bar {
     z-index: 0; }
-  /* line 169, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 215, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   #tab-bar:focus, #tab-bar :focus {
     outline: none; }
-  /* line 173, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 219, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   #tab-bar a {
     text-align: center;
     line-height: 48px;
     text-decoration: underline;
     color: inherit; }
 
-/* line 181, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 227, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 #content {
   margin-top: 16px;
   position: relative;
   color: rgba(0, 0, 0, 0.54); }
-  /* line 186, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 232, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   #content .page {
     position: absolute;
     top: 0px;
@@ -166,29 +206,29 @@ body {
     width: 100%;
     opacity: 1;
     transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1) 275ms; }
-    /* line 194, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 240, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #content .page:not(.selected) {
       opacity: 0;
       transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1); }
-    /* line 199, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 245, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #content .page.hidden {
       display: none; }
 
-/* line 205, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 251, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 .typography {
   font-size: 13px;
   font-weight: 400; }
   @media screen and (max-width: 768px) {
-    /* line 205, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 251, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography {
       font-size: 14px; } }
-  /* line 208, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 254, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography p {
     margin-top: 16px;
     margin-right: 0px;
     margin-bottom: 16px;
     margin-left: 0px; }
-  /* line 217, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 263, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography blockquote {
     color: rgba(0, 0, 0, 0.54);
     margin-top: 8px;
@@ -201,46 +241,46 @@ body {
     padding-right: 0px;
     padding-bottom: 8px;
     padding-left: 24px; }
-    /* line 234, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 280, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography blockquote i, .typography blockquote em {
       font-style: normal; }
-    /* line 238, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 284, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography blockquote p {
       margin-top: 0px;
       margin-bottom: 0px; }
-  /* line 246, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 292, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h1 {
     font-size: 45px;
     font-weight: 400; }
-  /* line 250, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 296, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h2 {
     font-size: 34px;
     font-weight: 400; }
-  /* line 254, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 300, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h3 {
     font-size: 24px;
     font-weight: 400; }
-  /* line 258, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 304, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h4 {
     font-size: 20px;
     font-weight: 500; }
-  /* line 262, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 308, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h5 {
     font-size: 15px;
     font-weight: 400; }
     @media screen and (max-width: 768px) {
-      /* line 262, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+      /* line 308, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
       .typography h5 {
         font-size: 16px; } }
-  /* line 266, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 312, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h6 {
     font-size: 13px;
     font-weight: 500; }
     @media screen and (max-width: 768px) {
-      /* line 266, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+      /* line 312, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
       .typography h6 {
         font-size: 14px; } }
-  /* line 270, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 316, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography hr {
     margin-top: 16px;
     margin-right: -16px;
@@ -248,72 +288,72 @@ body {
     margin-left: -16px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
-  /* line 281, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 327, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography ul, .typography ol {
     padding-left: 20px;
     margin-top: 16px;
     margin-right: 0px;
     margin-bottom: 16px;
     margin-left: 0px; }
-    /* line 290, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 336, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography ul li, .typography ol li {
       margin-bottom: 4px; }
-  /* line 295, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 341, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography a {
     color: #448aff;
     text-decoration: none; }
-    /* line 299, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 345, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography a:hover {
       text-decoration: underline; }
-  /* line 304, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 350, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography i, .typography em {
     font-style: italic; }
-  /* line 308, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 354, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography b, .typography strong {
     font-weight: bold; }
-    /* line 311, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 357, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography b.medium, .typography strong.medium {
       font-weight: 500; }
-  /* line 316, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 362, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography code {
     background-color: #f5f5f5;
     border-radius: 2px;
     padding: 1px 4px;
     margin: 0px 2px; }
-  /* line 325, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 371, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography pre {
     margin: 16px 0px;
     white-space: pre-wrap; }
-    /* line 329, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 375, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography pre code {
       display: block;
       font-size: 10pt;
       padding: 8px;
       margin: 0px;
       overflow-x: auto; }
-  /* line 338, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 384, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography > img {
     border-radius: 2px; }
-  /* line 342, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 388, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography ::selection {
     background-color: #82b1ff; }
-  /* line 346, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  /* line 392, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography .no-margin {
     margin: 0px; }
 
-/* line 351, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 397, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 .inline {
   display: inline; }
 
-/* line 355, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 401, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 .inline-block {
   display: inline-block; }
 
-/* line 359, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 405, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 .block {
   display: block; }
 
-/* line 363, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 409, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 .mono, .typography code {
   font-family: "Roboto Mono", "Droid Sans Mono", "Monaco", monospace; }
 

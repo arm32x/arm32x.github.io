@@ -154,6 +154,52 @@ body {
     }
 }
 
+.projects-card {
+    section {
+        height: 32px;
+        position: relative;
+    }
+    
+    .right-buttons {
+        opacity: 0;
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 8px;
+        height: 65px;
+        transition: opacity 225ms $swift-out;
+        
+        a {
+            display: inline-block;
+            padding: 8px;
+            border-radius: 20px;
+            height: 24px;
+            width: 24px;
+            color: $secondary-text-color;
+            font-size: 24px;
+            margin: 12.5px 0px;
+            transition: background-color 175ms $swift-out;
+            cursor: pointer;
+            
+            &:hover {
+                background: rgba($secondary-text-color, 0.2);
+            }
+            
+            i {
+                display: inline-block;
+                height: 24px;
+                line-height: 24px;
+                transform: translateY(-4px);
+            }
+        }
+    }
+}
+
+// Moved out because & wasn’t good enough
+.projects-card section:hover .right-buttons {
+    opacity: 1;
+}
+
 #tab-bar {
     @include material-text("Button");
     

@@ -39,7 +39,9 @@
             window.scroll (0, 0);
         }, 1);
     }
-
+    
+    // TODO: Add pagination via hash
+    
     tabs.addEventListener ("iron-select", paginate);
     paginate ();
 }
