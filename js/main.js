@@ -1,3 +1,5 @@
+// TODO: Fix legacy browser support (Chrome 48)
+
 {
     function scroll () {
         if (window.scrollY > 0) {
@@ -44,4 +46,42 @@
     
     tabs.addEventListener ("iron-select", paginate);
     paginate ();
+}
+
+{
+    let projectElements = document.querySelectorAll (".projects-card section");
+    let popoutButtons = document.querySelectorAll (".projects-card section .right-buttons .popup-button");
+    let modal = document.getElementById ("modal-dialog");
+    console.log (popoutButtons);
+    
+    for (let index = 0; index < popoutButtons.length; index++) {
+        popoutButtons[index].addEventListener ("click", () => {
+            // Browser compatibility
+            if (!("content" in document.createElement ("template"))) {
+                console.error ("Template element not supported");
+                return;
+            }
+            
+            let template = projectElements[index].getElementsByClassName ("modal-content")[0];
+            
+            // Clear contents and classes of #modal-dialog
+            modal.className = "";
+            while (modal.firstChild) {
+                modal.removeChild (modal.firstChild);
+            }
+            
+            // Set the content
+            modal.appendChild (document.importNode (template.content, true));
+            
+            // Set the classes
+            modal.className = template.getAttribute ("data-class");
+            
+            // Show the dialog
+            document.getElementById ("overlay").classList.add ("show");
+        });
+    }
+    
+    document.getElementById ("overlay").addEventListener ("click", () => {
+        document.getElementById ("overlay").classList.remove ("show");
+    });
 }

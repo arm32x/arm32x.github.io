@@ -385,7 +385,7 @@ body {
         border-radius: 2px;
     }
 
-    ::selection {
+    &::selection, ::selection {
         background-color: material-color("blue", "a100");
     }
     
@@ -408,4 +408,66 @@ body {
 
 .mono {
     font-family: $mono-font-family;
+}
+
+#overlay {
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    opacity: 0;
+    background-color: rgba(#000000, 0.5);
+    transition: opacity 400ms $swift-out;
+    z-index: 10;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    cursor: default;
+    
+    &.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    #modal-dialog {
+        @include material-elevation(24);
+        
+        padding: 16px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        overflow: auto;
+        color: $primary-text-color;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        margin: 0px;
+        max-height: calc(100vh - 32px);
+        width: 100%;
+        max-width: 65vw;
+        cursor: initial;
+        
+        &.no-padding {
+            padding: 0px;
+
+            section {
+                padding: 16px;
+            }
+        }
+
+        section {
+            border-bottom: 1px solid $divider-color;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        
+        @media screen and (max-width: $max-mobile-size) {
+            &#modal-dialog {
+                max-width: calc(100vw - 32px);
+            }
+        }
+    }
 }

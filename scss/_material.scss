@@ -332,7 +332,7 @@ $material-colors: (
 //
 //     https://gist.github.com/paulmelnikow/7fcfbe4f68e5df7fe326 (SCSS version)
 //     https://medium.com/@Florian/freebie-google-material-design-shadow-helper-2a0501295a2d (LESS version)
-@mixin material-shadow($level, $suffix) {
+@mixin material-shadow($level, $suffix: null) {
     @if $level == 1 {
         // Used for some FABs and cards
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) $suffix;
@@ -378,9 +378,9 @@ $material-colors: (
         $direct-alpha: (24 - round($dp / 10)) / 100;
         
         $shadow: $shadow + $direct-y + "px " + $direct-blur + "px rgba(0, 0, 0, " + $direct-alpha + ")";
-        $shadow: $shadow + $suffix;
+        $shadow: $shadow;
         
-        box-shadow: unquote($shadow);
+        box-shadow: unquote($shadow) $suffix;
         
         @if $lift != none {
             transform: translateY(($dp - $lift) * -1);
