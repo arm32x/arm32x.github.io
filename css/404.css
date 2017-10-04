@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,700i&amp;subset=cyrillic,greek,latin-ext");
+/* line 3, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+html {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Roboto", "Noto Sans", "Arial", "Helvetica", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fafafa; }
+  @media screen and (max-width: 768px) {
+    /* line 3, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+    html {
+      font-size: 14px; } }
+  /* line 10, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html p {
+    margin-top: 16px;
+    margin-right: 0px;
+    margin-bottom: 16px;
+    margin-left: 0px; }
+  /* line 19, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html blockquote {
+    color: rgba(0, 0, 0, 0.54);
+    margin-top: 8px;
+    margin-right: 0px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    font-style: italic;
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    padding-top: 8px;
+    padding-right: 0px;
+    padding-bottom: 8px;
+    padding-left: 24px; }
+    /* line 36, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+    html blockquote i, html blockquote em {
+      font-style: normal; }
+    /* line 40, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+    html blockquote p {
+      margin-top: 0px;
+      margin-bottom: 0px; }
+  /* line 48, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html h1 {
+    font-size: 45px;
+    font-weight: 400; }
+  /* line 52, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html h2 {
+    font-size: 34px;
+    font-weight: 400; }
+  /* line 56, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html h3 {
+    font-size: 24px;
+    font-weight: 400; }
+  /* line 60, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html h4 {
+    font-size: 20px;
+    font-weight: 500; }
+  /* line 64, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html h5 {
+    font-size: 15px;
+    font-weight: 400; }
+    @media screen and (max-width: 768px) {
+      /* line 64, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+      html h5 {
+        font-size: 16px; } }
+  /* line 68, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html h6 {
+    font-size: 13px;
+    font-weight: 500; }
+    @media screen and (max-width: 768px) {
+      /* line 68, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+      html h6 {
+        font-size: 14px; } }
+  /* line 72, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html hr {
+    margin-top: 16px;
+    margin-right: -16px;
+    margin-bottom: 16px;
+    margin-left: -16px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+  /* line 83, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html ul, html ol {
+    padding-left: 20px;
+    margin-top: 16px;
+    margin-right: 0px;
+    margin-bottom: 16px;
+    margin-left: 0px; }
+    /* line 92, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+    html ul li, html ol li {
+      margin-bottom: 4px; }
+  /* line 97, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html a {
+    color: #448aff;
+    text-decoration: none; }
+    /* line 101, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+    html a:hover {
+      text-decoration: underline; }
+  /* line 106, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html i, html em {
+    font-style: italic; }
+  /* line 110, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html b, html strong {
+    font-weight: bold; }
+    /* line 113, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+    html b.medium, html strong.medium {
+      font-weight: 500; }
+  /* line 118, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html code {
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    padding: 1px 4px;
+    margin: 0px 2px; }
+  /* line 127, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html pre {
+    margin: 16px 0px;
+    white-space: pre-wrap; }
+    /* line 131, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+    html pre code {
+      display: block;
+      font-size: 10pt;
+      padding: 8px;
+      margin: 0px;
+      overflow-x: auto; }
+  /* line 140, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html > img {
+    border-radius: 2px; }
+  /* line 144, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html::selection, html ::selection {
+    background-color: #82b1ff; }
+  /* line 148, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  html .no-margin {
+    margin: 0px; }
+
+/* line 153, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+body {
+  margin: 16px;
+  text-align: center; }
+
+/* line 158, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+.inline {
+  display: inline; }
+
+/* line 162, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+.inline-block {
+  display: inline-block; }
+
+/* line 166, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+.block {
+  display: block; }
+
+/* line 170, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+.mono, html code, #primary-title, #primary-title + h2 {
+  font-family: "Roboto Mono", "Droid Sans Mono", monospace; }
+
+/* line 174, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+#primary-title {
+  margin: 0px;
+  margin-bottom: -8px;
+  font-size: 224px;
+  font-weight: 100; }
+  /* line 182, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  #primary-title + h2 {
+    margin: 0px;
+    margin-bottom: 64px;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase; }
+
+/* line 193, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+#buttons a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+  /* line 197, /home/arm32/Projects/Web/arm32-website/scss/404.scss */
+  #buttons a paper-button.paper-button-0 {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    height: 36px;
+    line-height: 36px;
+    padding: 8px 16px;
+    min-width: 88px;
+    margin: 0px 4px; }
+
+/*# sourceMappingURL=404.css.map */

@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "paper-tabs": "PolymerElements/paper-tabs#^1.8.0",
-    "mdi": "^1.9.33"
+    "mdi": "^1.9.33",
+    "paper-button": "^1.0.15"
   }
 }
