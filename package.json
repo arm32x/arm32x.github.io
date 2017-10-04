@@ -1,0 +1,26 @@
+{
+  "name": "arm32-website",
+  "version": "1.0.0",
+  "description": "My website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arm32x/arm32x.github.io.git"
+  },
+  "author": "ARM32",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/arm32x/arm32x.github.io/issues"
+  },
+  "homepage": "https://github.com/arm32x/arm32x.github.io#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

@@ -1,4 +1,4 @@
-/* line 3, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,700i&amp;subset=cyrillic,greek,latin-ext");
 body {
   font-size: 13px;
   font-weight: 400;
@@ -9,19 +9,16 @@ body {
   margin-top: 320px;
   max-width: 65vw; }
   @media screen and (max-width: 768px) {
-    /* line 3, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     body {
       font-size: 14px; } }
   @media screen and (max-width: 768px) {
-    /* line 11, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     html body {
       margin-left: 16px;
       margin-right: 16px;
       max-width: none; } }
 
-/* line 23, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 #main-header {
-  box-shadow: none;
+  box-shadow: none !important;
   position: fixed;
   width: 100vw;
   top: 0px;
@@ -30,32 +27,27 @@ body {
   user-select: none;
   background-color: transparent;
   transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 275ms cubic-bezier(0.4, 0, 0.2, 1); }
-  /* line 35, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   #main-header.scrolled {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background-color: #f5f5f5;
     transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1); }
 
-/* line 43, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 #primary-title {
   font-size: 112px;
   font-weight: 300;
-  font-family: "Roboto Mono", "Fira Mono", "Droid Sans Mono", "Monaco", monospace;
+  font-family: "Roboto Mono", "Droid Sans Mono", monospace;
   text-align: center;
   padding: 0px;
   margin: 75px 0px;
   transition: margin 275ms cubic-bezier(0.4, 0, 0.2, 1), font-size 275ms cubic-bezier(0.4, 0, 0.2, 1), height 275ms cubic-bezier(0.4, 0, 0.2, 1), padding 275ms cubic-bezier(0.4, 0, 0.2, 1); }
-  /* line 52, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   #primary-title img {
     height: 140px;
     transition: height 200ms cubic-bezier(0.4, 0, 0.2, 1); }
-  /* line 57, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   header.scrolled #primary-title {
     margin: 0px;
     font-size: 0px;
     height: 24px;
     padding: 20px; }
-    /* line 63, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     header.scrolled #primary-title img {
       height: 28px;
       margin-top: -2px;
@@ -63,23 +55,18 @@ body {
       margin-bottom: -2px;
       margin-left: 0px; }
   @media screen and (max-width: 449px) {
-    /* line 43, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #primary-title {
       font-size: 56px;
       font-weight: 400; }
-      /* line 77, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
       #primary-title img {
         height: 112px; } }
   @media screen and (max-width: 369px) {
-    /* line 83, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #primary-title img {
       height: 77px; } }
   @media screen and (max-width: 259px) {
-    /* line 89, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #primary-title img {
       height: 56px; } }
 
-/* line 95, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 .card {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin: 16px;
@@ -89,37 +76,78 @@ body {
   position: relative;
   overflow: hidden;
   color: rgba(0, 0, 0, 0.87); }
-  /* line 106, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .mdl-cell .card {
     margin: 0px; }
-  /* line 110, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .card .full {
     width: calc(100% + 32px);
     height: calc(100% + 32px);
     margin: -16px;
     margin-bottom: -20px;
     object-fit: cover; }
-  /* line 118, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .card img.left {
     float: left;
     height: calc(100% + 32px);
     width: calc(50% + 16px);
     margin: -16px;
     margin-right: 16px; }
-  /* line 126, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .card img.right {
     float: right;
     height: calc(100% + 32px);
     width: calc(50% + 16px);
     margin: -16px;
     margin-left: 16px; }
-  /* line 134, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .card img.top {
     width: calc(100% + 32px);
     margin: -16px;
     margin-bottom: 16px; }
+  .card.no-padding {
+    padding: 0px; }
+    .card.no-padding section {
+      padding: 16px; }
+  .card section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+    .card section:last-child {
+      border-bottom: none; }
 
-/* line 141, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+.projects-card section {
+  min-height: 32px;
+  position: relative; }
+
+.projects-card .right-buttons {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 0px 8px;
+  height: 65px;
+  transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  user-select: none;
+  font-size: 0px; }
+  .projects-card .right-buttons a {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 20px;
+    height: 24px;
+    width: 24px;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 24px;
+    margin: 12.5px 0px;
+    margin-left: 4px;
+    transition: background-color 175ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer; }
+    .projects-card .right-buttons a:hover {
+      background: rgba(0, 0, 0, 0.2); }
+    .projects-card .right-buttons a i {
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      transform: translateY(-1px); }
+
+.projects-card section:hover .right-buttons {
+  opacity: 1; }
+
 #tab-bar {
   font-size: 14px;
   font-weight: 500;
@@ -128,19 +156,20 @@ body {
   margin-top: -48px;
   height: 48px;
   z-index: 2; }
-  /* line 149, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   header.scrolled + #tab-bar {
     z-index: 0; }
-  /* line 153, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   #tab-bar:focus, #tab-bar :focus {
     outline: none; }
+  #tab-bar a {
+    text-align: center;
+    line-height: 48px;
+    text-decoration: underline;
+    color: inherit; }
 
-/* line 158, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 #content {
   margin-top: 16px;
   position: relative;
   color: rgba(0, 0, 0, 0.54); }
-  /* line 163, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   #content .page {
     position: absolute;
     top: 0px;
@@ -148,30 +177,23 @@ body {
     width: 100%;
     opacity: 1;
     transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1) 275ms; }
-    /* line 171, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #content .page:not(.selected) {
       opacity: 0;
       transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1); }
-    /* line 176, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #content .page.hidden {
       display: none; }
 
-/* line 182, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 .typography {
   font-size: 13px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.87); }
+  font-weight: 400; }
   @media screen and (max-width: 768px) {
-    /* line 182, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography {
       font-size: 14px; } }
-  /* line 187, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography p {
     margin-top: 16px;
     margin-right: 0px;
     margin-bottom: 16px;
     margin-left: 0px; }
-  /* line 196, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography blockquote {
     color: rgba(0, 0, 0, 0.54);
     margin-top: 8px;
@@ -184,46 +206,35 @@ body {
     padding-right: 0px;
     padding-bottom: 8px;
     padding-left: 24px; }
-    /* line 213, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography blockquote i, .typography blockquote em {
       font-style: normal; }
-    /* line 217, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography blockquote p {
       margin-top: 0px;
       margin-bottom: 0px; }
-  /* line 225, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h1 {
     font-size: 45px;
     font-weight: 400; }
-  /* line 229, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h2 {
     font-size: 34px;
     font-weight: 400; }
-  /* line 233, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h3 {
     font-size: 24px;
     font-weight: 400; }
-  /* line 237, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h4 {
     font-size: 20px;
     font-weight: 500; }
-  /* line 241, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h5 {
     font-size: 15px;
     font-weight: 400; }
     @media screen and (max-width: 768px) {
-      /* line 241, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
       .typography h5 {
         font-size: 16px; } }
-  /* line 245, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography h6 {
     font-size: 13px;
     font-weight: 500; }
     @media screen and (max-width: 768px) {
-      /* line 245, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
       .typography h6 {
         font-size: 14px; } }
-  /* line 249, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography hr {
     margin-top: 16px;
     margin-right: -16px;
@@ -231,52 +242,149 @@ body {
     margin-left: -16px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
-  /* line 260, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography ul, .typography ol {
     padding-left: 20px;
     margin-top: 16px;
     margin-right: 0px;
     margin-bottom: 16px;
     margin-left: 0px; }
-    /* line 269, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography ul li, .typography ol li {
       margin-bottom: 4px; }
-  /* line 274, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography a {
     color: #448aff;
     text-decoration: none; }
-    /* line 278, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography a:hover {
       text-decoration: underline; }
-  /* line 283, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography i, .typography em {
     font-style: italic; }
-  /* line 287, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography b, .typography strong {
     font-weight: bold; }
-  /* line 291, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    .typography b.medium, .typography strong.medium {
+      font-weight: 500; }
   .typography code {
-    font-family: "Roboto Mono", "Droid Sans Mono", "Monaco", monospace;
     background-color: #f5f5f5;
     border-radius: 2px;
     padding: 1px 4px;
     margin: 0px 2px; }
-  /* line 299, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography pre {
     margin: 16px 0px;
     white-space: pre-wrap; }
-    /* line 303, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     .typography pre code {
       display: block;
       font-size: 10pt;
       padding: 8px;
       margin: 0px;
       overflow-x: auto; }
-  /* line 312, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   .typography > img {
     border-radius: 2px; }
-  /* line 316, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
-  .typography ::selection {
+  .typography::selection, .typography ::selection {
     background-color: #82b1ff; }
+  .typography .no-margin {
+    margin: 0px; }
 
-/*# sourceMappingURL=main.css.map */
+.inline {
+  display: inline; }
+
+.inline-block {
+  display: inline-block; }
+
+.block {
+  display: block; }
+
+.mono, .typography code {
+  font-family: "Roboto Mono", "Droid Sans Mono", monospace; }
+
+#overlay {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  cursor: default; }
+  #overlay.show {
+    opacity: 1;
+    pointer-events: auto; }
+  #overlay #modal-dialog {
+    box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.36559), 0px 20px 48px rgba(0, 0, 0, 0.22);
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    overflow: auto;
+    color: rgba(0, 0, 0, 0.87);
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin: 0px;
+    max-height: calc(100vh - 32px);
+    width: 100%;
+    max-width: 65vw;
+    cursor: initial; }
+    #overlay #modal-dialog.no-padding {
+      padding: 0px; }
+      #overlay #modal-dialog.no-padding section {
+        padding: 16px; }
+    #overlay #modal-dialog section {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+      #overlay #modal-dialog section:last-child {
+        border-bottom: none; }
+    @media screen and (max-width: 768px) {
+      #overlay #modal-dialog#modal-dialog {
+        max-width: calc(100vw - 32px); } }
+
+.no-margin {
+  margin: 0px; }
+
+.tips-category {
+  padding: 0px;
+  transition: box-shadow 225ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  color: white;
+  background-color: #424242;
+  height: 96px;
+  position: relative; }
+  .tips-category:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .tips-category::selection, .tips-category ::selection {
+    background-color: rgba(255, 255, 255, 0.2); }
+  .tips-category h4 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0px 16px; }
+
+.tips-application {
+  transition: box-shadow 225ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  line-height: 24px; }
+  .tips-application:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .tips-application-icon {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    user-select: none;
+    object-fit: contain; }
+
+#tips-category-customize {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.techicorner.com/wp-content/uploads/2015/09/mutli-theme-he.jpg");
+  background-size: cover;
+  background-position: center; }
+
+#tips-category-essentials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img.clipartfest.com/ba0e33432da284dadd142771ebd8104c_tips-to-protect-your-teaching-tips_1230-640.jpeg");
+  background-size: cover;
+  background-position: center right; }
+
+#tips-category-new-app {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.pexels.com/photos/6565/apple-desk-laptop-working.jpg");
+  background-size: cover;
+  background-position: center; }

@@ -1,0 +1,211 @@
+@import "material";
+
+html {
+    @include material-text("Body");
+    
+    font-family: $font-family;
+    color: $primary-text-color;
+    background-color: #fafafa;
+
+    p {
+        margin: {
+            top: 16px;
+            right: 0px;
+            bottom: 16px;
+            left: 0px;
+        };
+    }
+
+    blockquote {
+        color: $secondary-text-color;
+        margin: {
+            top: 8px;
+            right: 0px;
+            bottom: 8px;
+            left: 8px;
+        };
+        font-style: italic;
+        border-left: 1px solid $divider-color;
+        padding: {
+            top: 8px;
+            right: 0px;
+            bottom: 8px;
+            left: 24px;
+        };
+
+        i, em {
+            font-style: normal;
+        }
+
+        p {
+            margin: {
+                top: 0px;
+                bottom: 0px;
+            }
+        }
+    }
+
+    h1 {
+        @include material-text("Display 2");
+    }
+
+    h2 {
+        @include material-text("Display 1");
+    }
+
+    h3 {
+        @include material-text("Headline");
+    }
+
+    h4 {
+        @include material-text("Title");
+    }
+
+    h5 {
+        @include material-text("Subheading");
+    }
+
+    h6 {
+        @include material-text("Body 2");
+    }
+
+    hr {
+        margin: {
+            top: 16px;
+            right: -16px;
+            bottom: 16px;
+            left: -16px;
+        };
+        border: none;
+        border-bottom: 1px solid $divider-color;
+    }
+
+    ul, ol {
+        padding-left: 20px;
+        margin: {
+            top: 16px;
+            right: 0px;
+            bottom: 16px;
+            left: 0px;
+        };
+
+        li {
+            margin-bottom: 4px;
+        }
+    }
+
+    a {
+        color: material-color("blue", "a200");
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    i, em {
+        font-style: italic;
+    }
+
+    b, strong {
+        font-weight: bold;
+        
+        &.medium {
+            font-weight: 500;
+        }
+    }
+
+    code {
+        @extend .mono;
+        
+        background-color: #f5f5f5;
+        border-radius: 2px;
+        padding: 1px 4px;
+        margin: 0px 2px;
+    }
+
+    pre {
+        margin: 16px 0px;
+        white-space: pre-wrap;
+
+        code {
+            display: block;
+            font-size: 10pt;
+            padding: 8px;
+            margin: 0px;
+            overflow-x: auto;
+        }
+    }
+
+    > img {
+        border-radius: 2px;
+    }
+
+    &::selection, ::selection {
+        background-color: material-color("blue", "a100");
+    }
+    
+    .no-margin {
+        margin: 0px;
+    }
+}
+
+body {
+    margin: 16px;
+    text-align: center;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.mono {
+    font-family: $mono-font-family;
+}
+
+#primary-title {
+    @extend .mono;
+
+    margin: 0px;
+    margin-bottom: -8px;
+    font-size: 224px;
+    font-weight: 100;
+    
+    + h2 {
+        @extend .mono;
+        
+        margin: 0px;
+        margin-bottom: 64px;
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+#buttons a {
+    color: $primary-text-color;
+    text-decoration: none;
+    
+    paper-button.paper-button-0 {
+        @include material-text("Button");
+    
+        box-sizing: border-box;
+        height: 36px;
+        line-height: 36px;
+        padding: 8px 16px;
+        min-width: 88px;
+        margin: 0px 4px;
+    }
+}
+
+html > body paper-button.paper-button-0 {
+    
+}
