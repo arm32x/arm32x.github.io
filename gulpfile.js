@@ -29,7 +29,7 @@ gulp.task("sass", () => {
 gulp.task("babel", () => {
     return gulp.src("js/**/*.es6.js")
         .pipe(babel({
-            // Add options here
+            "presets": ["env"]
         }))
         .pipe(extReplace(".js", ".es6.js"))
         .pipe(gulp.dest("js"));
