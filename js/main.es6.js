@@ -20,7 +20,9 @@
     function paginate() {
         window.clearTimeout(animateTimeout);
         let prevPage = document.getElementsByClassName("page selected")[0];
-        let page = document.getElementById("page-" +(parseInt(tabs.selected) + 1));
+        let pageId = "page-" + (parseInt(tabs.selected) + 1);
+        let page = document.getElementById(pageId);
+        window.location.hash = pageId;
         for (let page of pages) {
             page.classList.remove("selected");
             page.classList.remove("hidden");
@@ -40,9 +42,10 @@
         }, 1);
     }
     
-    // TODO: Add pagination via hash
-    
     tabs.addEventListener("iron-select", paginate);
+    if (window.location.hash.substring(0, 6) == "#page-") {
+        tabs.selected = parseInt(window.location.hash.substring(6)) - 1;
+    }
     paginate();
 }
 

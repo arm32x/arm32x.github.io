@@ -18,7 +18,9 @@
     var paginate = function paginate() {
         window.clearTimeout(animateTimeout);
         var prevPage = document.getElementsByClassName("page selected")[0];
-        var page = document.getElementById("page-" + (parseInt(tabs.selected) + 1));
+        var pageId = "page-" + (parseInt(tabs.selected) + 1);
+        var page = document.getElementById(pageId);
+        window.location.hash = pageId;
         var _iteratorNormalCompletion = true;
         var _didIteratorError = false;
         var _iteratorError = undefined;
@@ -81,13 +83,14 @@
         }, 1);
     };
 
-    // TODO: Add pagination via hash
-
     var tabs = document.getElementById("tab-bar");
     var pages = document.getElementsByClassName("page");
     var animateTimeout = void 0;
 
     tabs.addEventListener("iron-select", paginate);
+    if (window.location.hash.substring(0, 6) == "#page-") {
+        tabs.selected = parseInt(window.location.hash.substring(6)) - 1;
+    }
     paginate();
 }
 
