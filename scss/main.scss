@@ -21,22 +21,22 @@ body {
 }
 
 #main-header {
-    @include material-elevation(0);
+    @include material-elevation(2);
     
     position: fixed;
     width: 100vw;
+    height: 320px;
     top: 0px;
     left: 0px;
     z-index: 1;
     user-select: none;
-    background-color: transparent;
-    transition: background-color 150ms $curve-standard, box-shadow 275ms $curve-standard;
+    background-color: #f5f5f5;
+    transition: box-shadow 275ms $curve-standard, height 150ms $curve-standard;
     
     &.scrolled {
         @include material-elevation(2);
         
-        background-color: #f5f5f5;
-        transition: background-color 75ms $curve-standard;
+        height: 64px;
     }
 }
 
@@ -212,6 +212,7 @@ body {
     margin-top: -48px;
     height: 48px;
     z-index: 2;
+    transition: z-index 0ms linear 50ms;
     
     header.scrolled + & {
         z-index: 0;
