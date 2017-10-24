@@ -158,6 +158,10 @@ body {
     section {
         min-height: 32px;
         position: relative;
+        
+        &:hover .right-buttons {
+            opacity: 1;
+        }
     }
     
     .right-buttons {
@@ -198,11 +202,6 @@ body {
             }
         }
     }
-}
-
-// Moved out because & wasn’t good enough
-.projects-card section:hover .right-buttons {
-    opacity: 1;
 }
 
 #tab-bar {
@@ -291,6 +290,49 @@ body {
             margin: {
                 top: 0px;
                 bottom: 0px;
+            }
+        }
+        
+        &.info {
+            background-color: material-color("amber", "100");
+            position: relative;
+            box-sizing: border-box;
+            border-radius: 2px;
+            border-left: none;
+            font-style: normal;
+            min-height: 40px;
+            padding: {
+                top: 12px;
+                right: 8px;
+                bottom: 12px;
+                left: 64px;
+            }
+            margin: {
+                right: 16px;
+                left: 16px;
+            }
+            
+            @media screen and (max-width: $max-mobile-size) {
+                margin: {
+                    right: 8px;
+                    left: 8px;
+                }
+            }
+            
+            @at-root .typography .projects-card section blockquote.info,
+                     .projects-card.typography section blockquote.info {
+                margin: {
+                    top: 16px;
+                    bottom: 0px;
+                }
+            }
+            
+            &::before {
+                font-size: 24px;
+                position: absolute;
+                top: 50%;
+                left: 24px;
+                transform: translateY(-50%);
             }
         }
     }

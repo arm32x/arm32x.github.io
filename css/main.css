@@ -112,6 +112,8 @@ body {
 .projects-card section {
   min-height: 32px;
   position: relative; }
+  .projects-card section:hover .right-buttons {
+    opacity: 1; }
 
 .projects-card .right-buttons {
   opacity: 0;
@@ -144,9 +146,6 @@ body {
       height: 24px;
       line-height: 24px;
       transform: translateY(-1px); }
-
-.projects-card section:hover .right-buttons {
-  opacity: 1; }
 
 #tab-bar {
   font-size: 14px;
@@ -212,6 +211,33 @@ body {
     .typography blockquote p {
       margin-top: 0px;
       margin-bottom: 0px; }
+    .typography blockquote.info {
+      background-color: #ffecb3;
+      position: relative;
+      box-sizing: border-box;
+      border-radius: 2px;
+      border-left: none;
+      font-style: normal;
+      min-height: 40px;
+      padding-top: 12px;
+      padding-right: 8px;
+      padding-bottom: 12px;
+      padding-left: 64px;
+      margin-right: 16px;
+      margin-left: 16px; }
+      @media screen and (max-width: 768px) {
+        .typography blockquote.info {
+          margin-right: 8px;
+          margin-left: 8px; } }
+      .typography .projects-card section blockquote.info, .projects-card.typography section blockquote.info {
+        margin-top: 16px;
+        margin-bottom: 0px; }
+      .typography blockquote.info::before {
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        left: 24px;
+        transform: translateY(-50%); }
   .typography h1 {
     font-size: 45px;
     font-weight: 400; }
