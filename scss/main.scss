@@ -21,22 +21,22 @@ body {
 }
 
 #main-header {
-    @include material-elevation(0);
+    @include material-elevation(2);
     
     position: fixed;
     width: 100vw;
+    height: 320px;
     top: 0px;
     left: 0px;
     z-index: 1;
     user-select: none;
-    background-color: transparent;
-    transition: background-color 150ms $curve-standard, box-shadow 275ms $curve-standard;
+    background-color: #f5f5f5;
+    transition: box-shadow 275ms $curve-standard, height 175ms $curve-standard;
     
     &.scrolled {
         @include material-elevation(2);
         
-        background-color: #f5f5f5;
-        transition: background-color 75ms $curve-standard;
+        height: 64px;
     }
 }
 
@@ -158,6 +158,10 @@ body {
     section {
         min-height: 32px;
         position: relative;
+        
+        &:hover .right-buttons {
+            opacity: 1;
+        }
     }
     
     .right-buttons {
@@ -200,11 +204,6 @@ body {
     }
 }
 
-// Moved out because & wasn’t good enough
-.projects-card section:hover .right-buttons {
-    opacity: 1;
-}
-
 #tab-bar {
     @include material-text("Button");
     
@@ -212,6 +211,7 @@ body {
     margin-top: -48px;
     height: 48px;
     z-index: 2;
+    transition: z-index 0ms linear 50ms;
     
     header.scrolled + & {
         z-index: 0;
@@ -290,6 +290,49 @@ body {
             margin: {
                 top: 0px;
                 bottom: 0px;
+            }
+        }
+        
+        &.info {
+            background-color: material-color("amber", "100");
+            position: relative;
+            box-sizing: border-box;
+            border-radius: 2px;
+            border-left: none;
+            font-style: normal;
+            min-height: 40px;
+            padding: {
+                top: 12px;
+                right: 8px;
+                bottom: 12px;
+                left: 64px;
+            }
+            margin: {
+                right: 16px;
+                left: 16px;
+            }
+            
+            @media screen and (max-width: $max-mobile-size) {
+                margin: {
+                    right: 8px;
+                    left: 8px;
+                }
+            }
+            
+            @at-root .typography .projects-card section blockquote.info,
+                     .projects-card.typography section blockquote.info {
+                margin: {
+                    top: 16px;
+                    bottom: 0px;
+                }
+            }
+            
+            &::before {
+                font-size: 24px;
+                position: absolute;
+                top: 50%;
+                left: 24px;
+                transform: translateY(-50%);
             }
         }
     }
