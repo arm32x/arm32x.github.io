@@ -31,7 +31,7 @@ body {
     z-index: 1;
     user-select: none;
     background-color: #f5f5f5;
-    transition: box-shadow 275ms $curve-standard, height 150ms $curve-standard;
+    transition: box-shadow 275ms $curve-standard, height 175ms $curve-standard;
     
     &.scrolled {
         @include material-elevation(2);
