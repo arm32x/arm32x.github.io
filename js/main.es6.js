@@ -1,11 +1,43 @@
 {
+	function clamp(value, minn, maxx) {
+		if (value < minn) {
+			value = minn;
+		} else if (value > maxx) {
+			value = maxx;
+		}
+		return value;
+	}
+	
+	function lerp(start, end, t) {
+		return (1 - t) * start + t * end;
+	}
+	
     function scroll() {
-        if(window.scrollY > 0) {
-            document.getElementById("main-header").classList.add("scrolled");
+		let header = document.getElementById("main-header");
+		let title = document.getElementById("primary-title");
+		let logo = title.getElementsByTagName("img")[0];
+		
+        if (window.scrollY > 0) {
+            header.classList.add("scrolled");
         } else {
-            document.getElementById("main-header").classList.remove("scrolled");
+            header.classList.remove("scrolled");
         }
-
+		
+		let height = 320 - window.scrollY;
+		let heightProgression = (height - 112) / 208;
+		if (height < 64) {
+			height = 64;
+		}
+		if (height < 112) {
+			document.getElementById("tab-bar").style.opacity = (height - 96) / 16;
+		} else {
+			document.getElementById("tab-bar").style.opacity = 1;
+		}
+		logo.style.height = clamp(lerp(28, 140, heightProgression), 28, 140) + "px";
+		title.style.marginBottom = title.style.marginTop = clamp(lerp(0, 75, heightProgression), 0, 75) + "px";
+		title.style.padding = clamp(lerp(20, 0, heightProgression), 0, 20) + "px";
+		header.style.height = height + "px";
+		
         window.requestAnimationFrame(scroll);
     }
 
