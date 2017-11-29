@@ -10,7 +10,8 @@ const extReplace = require("gulp-ext-replace");
 
 gulp.task("server", ["sass", "babel"], () => {
     browserSync.init({
-        server: "."
+        server: ".",
+        open: false
     });
     
     gulp.watch("scss/main.scss", ["sass"]);
