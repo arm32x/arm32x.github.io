@@ -13,21 +13,18 @@
 	}
 	
     function scroll() {
-		let header = document.getElementById("main-header");
+		let header = document.getElementById("primary-title-container");
 		let title = document.getElementById("primary-title");
 		let logo = title.getElementsByTagName("img")[0];
-		
-        if (window.scrollY > 0) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
 		
 		let height = 320 - window.scrollY;
 		let heightProgression = (height - 112) / 208;
 		if (height < 64) {
+            document.getElementById("main-header").classList.add("collapsed");
 			height = 64;
-		}
+		} else {
+            document.getElementById("main-header").classList.remove("collapsed");
+        }
 		if (height < 112) {
 			document.getElementById("tab-bar").style.opacity = (height - 96) / 16;
 		} else {

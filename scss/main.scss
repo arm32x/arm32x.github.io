@@ -20,9 +20,7 @@ body {
     max-width: 65vw;
 }
 
-#main-header {
-    @include material-elevation(2);
-    
+#primary-title-container {
     position: fixed;
     width: 100vw;
     height: 320px;
@@ -30,7 +28,20 @@ body {
     left: 0px;
     z-index: 1;
     user-select: none;
+}
+
+#main-header {
+    @extend #primary-title-container;
+    
+    @include material-elevation(2);
+    
+    position: absolute;
     background-color: $app-bar-color;
+
+    &.collapsed {
+        position: fixed;
+        height: 64px;
+    }
 }
 
 #primary-title {
