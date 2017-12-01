@@ -15,6 +15,17 @@
     };
 
     var scroll = function scroll() {
+        var fullLogoHeight = 140;
+        if (window.matchMedia("(max-width: 449px)").matches) {
+            fullLogoHeight = 112;
+        }
+        if (window.matchMedia("(max-width: 369px)").matches) {
+            fullLogoHeight = 77;
+        }
+        if (window.matchMedia("(max-width: 259px)").matches) {
+            fullLogoHeight = 56;
+        }
+
         var header = document.getElementById("primary-title-container");
         var title = document.getElementById("primary-title");
         var logo = title.getElementsByTagName("img")[0];
@@ -32,7 +43,7 @@
         } else {
             document.getElementById("tab-bar").style.opacity = 1;
         }
-        logo.style.height = clamp(lerp(28, 140, heightProgression), 28, 140) + "px";
+        logo.style.height = clamp(lerp(28, fullLogoHeight, heightProgression), 28, fullLogoHeight) + "px";
         title.style.marginBottom = title.style.marginTop = clamp(lerp(0, 75, heightProgression), 0, 75) + "px";
         title.style.padding = clamp(lerp(20, 0, heightProgression), 0, 20) + "px";
         header.style.height = height + "px";
