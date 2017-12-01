@@ -1,4 +1,6 @@
 {
+    const headerCurve = bezier(0.4, 0.0, 0.6, 1.0);
+
 	function clamp(value, minn, maxx) {
 		if (value < minn) {
 			value = minn;
@@ -30,6 +32,8 @@
 		
 		let height = 320 - window.scrollY;
 		let heightProgression = (height - 112) / 208;
+        heightProgression = clamp(heightProgression, 0.0, 1.0);
+        heightProgression = headerCurve(heightProgression);
 		if (height < 64) {
             document.getElementById("main-header").classList.add("collapsed");
 			height = 64;
