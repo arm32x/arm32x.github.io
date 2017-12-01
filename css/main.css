@@ -46,22 +46,29 @@ body {
   padding: 0px;
   margin: 75px 0px;
   position: relative;
-  font-size: 0px; }
+  font-size: 0px;
+  /*@media screen and (max-width: 449px) {
+        @include material-text("Display 3");
+        
+        img {
+            height: 112px;
+        }
+    }
+    
+    @media screen and (max-width: 369px) {
+        img {
+            height: 77px;
+        }
+    }
+    
+    @media screen and (max-width: 259px) {
+        img {
+            height: 56px;
+        }
+    }*/ }
   #primary-title img {
     height: 140px;
     margin: -2px 0px; }
-  @media screen and (max-width: 449px) {
-    #primary-title {
-      font-size: 56px;
-      font-weight: 400; }
-      #primary-title img {
-        height: 112px; } }
-  @media screen and (max-width: 369px) {
-    #primary-title img {
-      height: 77px; } }
-  @media screen and (max-width: 259px) {
-    #primary-title img {
-      height: 56px; } }
 
 .card {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
