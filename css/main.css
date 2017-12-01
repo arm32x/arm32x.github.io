@@ -17,9 +17,7 @@ body {
       margin-right: 16px;
       max-width: none; } }
 
-#main-header {
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+#primary-title-container, #main-header {
   position: fixed;
   width: 100vw;
   height: 320px;
@@ -29,8 +27,16 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none;
+          user-select: none; }
+
+#main-header {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: absolute;
   background-color: #f5f5f5; }
+  #main-header.collapsed {
+    position: fixed;
+    height: 64px; }
 
 #primary-title {
   font-size: 112px;
