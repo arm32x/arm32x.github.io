@@ -18,18 +18,14 @@ body {
       max-width: none; } }
 
 #main-header {
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   position: fixed;
   width: 100vw;
   height: 320px;
   top: 0px;
   left: 0px;
   z-index: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   background-color: #f5f5f5; }
 
 #primary-title {
@@ -58,8 +54,7 @@ body {
       height: 56px; } }
 
 .card {
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin: 16px;
   padding: 16px;
   background-color: #ffffff;
@@ -72,8 +67,7 @@ body {
     height: calc(100% + 32px);
     margin: -16px;
     margin-bottom: -20px;
-    -o-object-fit: cover;
-       object-fit: cover; }
+    object-fit: cover; }
   .card .left {
     float: left;
     height: calc(100% + 32px);
@@ -113,14 +107,9 @@ body {
   right: 0px;
   padding: 0px 8px;
   height: 65px;
-  -webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   font-size: 0px; }
   .projects-card .right-buttons a {
     display: inline-block;
@@ -132,8 +121,6 @@ body {
     font-size: 24px;
     margin: 12.5px 0px;
     margin-left: 4px;
-    -webkit-transition: background-color 175ms cubic-bezier(0.4, 0, 0.2, 1);
-    -o-transition: background-color 175ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: background-color 175ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer; }
     .projects-card .right-buttons a:hover {
@@ -142,9 +129,7 @@ body {
       display: inline-block;
       height: 24px;
       line-height: 24px;
-      -webkit-transform: translateY(-1px);
-          -ms-transform: translateY(-1px);
-              transform: translateY(-1px); }
+      transform: translateY(-1px); }
 
 #tab-bar {
   font-size: 14px;
@@ -173,13 +158,9 @@ body {
     left: 0px;
     width: 100%;
     opacity: 1;
-    -webkit-transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1) 275ms;
-    -o-transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1) 275ms;
     transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1) 275ms; }
     #content .page:not(.selected) {
       opacity: 0;
-      -webkit-transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1);
-      -o-transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1);
       transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1); }
     #content .page.hidden {
       display: none; }
@@ -215,8 +196,7 @@ body {
     .typography blockquote.info {
       background-color: #ffecb3;
       position: relative;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
+      box-sizing: border-box;
       border-radius: 2px;
       border-left: none;
       font-style: normal;
@@ -239,9 +219,7 @@ body {
         position: absolute;
         top: 50%;
         left: 24px;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%); }
+        transform: translateY(-50%); }
   .typography h1 {
     font-size: 45px;
     font-weight: 400; }
@@ -308,8 +286,6 @@ body {
       overflow-x: auto; }
   .typography > img {
     border-radius: 2px; }
-  .typography::-moz-selection, .typography ::-moz-selection {
-    background-color: #82b1ff; }
   .typography::selection, .typography ::selection {
     background-color: #82b1ff; }
   .typography .no-margin, .typography .mdl-cell .card, .mdl-cell .typography .card {
@@ -335,33 +311,26 @@ body {
   left: 0px;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10;
   pointer-events: none;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   cursor: default; }
   #overlay.show {
     opacity: 1;
     pointer-events: auto; }
   #overlay #modal-dialog {
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     padding: 16px;
     background-color: #ffffff;
     border-radius: 2px;
     overflow: auto;
     color: rgba(0, 0, 0, 0.87);
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-        -ms-transform: translateY(-50%) translateX(-50%);
-            transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
     margin: 0px;
     max-height: calc(100vh - 32px);
     width: 100%;
