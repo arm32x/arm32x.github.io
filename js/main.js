@@ -32,6 +32,7 @@
 
         var height = 320 - window.scrollY;
         var heightProgression = (height - 112) / 208;
+        heightProgression = clamp(heightProgression, 0.0, 1.0);
         if (height < 64) {
             document.getElementById("main-header").classList.add("collapsed");
             height = 64;
@@ -43,13 +44,15 @@
         } else {
             document.getElementById("tab-bar").style.opacity = 1;
         }
-        logo.style.height = clamp(lerp(28, fullLogoHeight, heightProgression), 28, fullLogoHeight) + "px";
-        title.style.marginBottom = title.style.marginTop = clamp(lerp(0, 75, heightProgression), 0, 75) + "px";
+        logo.style.height = clamp(lerp(28, fullLogoHeight, headerCurve(heightProgression)), 28, fullLogoHeight) + "px";
+        title.style.marginBottom = title.style.marginTop = clamp(lerp(0, 75, headerCurve(heightProgression)), 0, 75) + "px";
         title.style.padding = clamp(lerp(20, 0, heightProgression), 0, 20) + "px";
         header.style.height = height + "px";
 
         window.requestAnimationFrame(scroll);
     };
+
+    var headerCurve = bezier(0.4, 0.0, 0.6, 1.0);
 
     scroll();
 }

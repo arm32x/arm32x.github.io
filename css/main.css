@@ -46,26 +46,7 @@ body {
   padding: 0px;
   margin: 75px 0px;
   position: relative;
-  font-size: 0px;
-  /*@media screen and (max-width: 449px) {
-        @include material-text("Display 3");
-        
-        img {
-            height: 112px;
-        }
-    }
-    
-    @media screen and (max-width: 369px) {
-        img {
-            height: 77px;
-        }
-    }
-    
-    @media screen and (max-width: 259px) {
-        img {
-            height: 56px;
-        }
-    }*/ }
+  font-size: 0px; }
   #primary-title img {
     height: 140px;
     margin: -2px 0px; }
