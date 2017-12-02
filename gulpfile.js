@@ -28,7 +28,7 @@ gulp.task("sass", () => {
         .pipe(gulp.dest("css/proc"));
 });
 
-gulp.task("autoprefixer", () => {
+gulp.task("autoprefixer", ["sass"], () => {
     return gulp.src("css/proc/*.css")
         .pipe(autoprefixer({ browsers: ["last 3 versions", "chrome 49", ">10%"] }))
         .pipe(gulp.dest("css"));
@@ -44,7 +44,7 @@ gulp.task("babel", () => {
 });
 
 
-gulp.task("serve-css", ["sass", "autoprefixer"], () => {
+gulp.task("serve-css", ["autoprefixer"], () => {
     return gulp.src("css/*.css")
         .pipe(browserSync.stream());
 });
