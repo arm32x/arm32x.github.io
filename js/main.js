@@ -140,15 +140,13 @@
 {
     (function () {
         var projectElements = document.querySelectorAll(".projects-card section");
-        var popoutButtons = document.querySelectorAll(".projects-card section .right-buttons .popup-button");
         var modal = document.getElementById("modal-dialog");
         modal.addEventListener("click", function (e) {
             e.stopPropagation();
         });
-        console.log(popoutButtons);
 
         var _loop = function _loop(index) {
-            popoutButtons[index].addEventListener("click", function () {
+            projectElements[index].addEventListener("click", function () {
                 // Browser compatibility
                 if (!("content" in document.createElement("template"))) {
                     console.error("Template element not supported");
@@ -166,15 +164,18 @@
                 // Set the content
                 modal.appendChild(document.importNode(template.content, true));
 
-                // Set the classes
+                // Add the classes
                 modal.className = template.getAttribute("data-class");
+
+                // Show the modal
+                document.getElementById("overlay").classList.add("show");
 
                 // Show the dialog
                 document.getElementById("overlay").classList.add("show");
             });
         };
 
-        for (var index = 0; index < popoutButtons.length; index++) {
+        for (var index = 0; index < projectElements.length; index++) {
             _loop(index);
         }
 

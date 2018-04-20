@@ -94,15 +94,13 @@
 
 {
     let projectElements = document.querySelectorAll(".projects-card section");
-    let popoutButtons = document.querySelectorAll(".projects-card section .right-buttons .popup-button");
     let modal = document.getElementById("modal-dialog");
     modal.addEventListener("click", (e) => {
         e.stopPropagation();
     });
-    console.log(popoutButtons);
     
-    for(let index = 0; index < popoutButtons.length; index++) {
-        popoutButtons[index].addEventListener("click", () => {
+    for(let index = 0; index < projectElements.length; index++) {
+        projectElements[index].addEventListener("click", () => {
             // Browser compatibility
             if(!("content" in document.createElement("template"))) {
                 console.error("Template element not supported");
@@ -120,8 +118,11 @@
             // Set the content
             modal.appendChild(document.importNode(template.content, true));
             
-            // Set the classes
+            // Add the classes
             modal.className = template.getAttribute("data-class");
+
+            // Show the modal
+            document.getElementById("overlay").classList.add("show");
             
             // Show the dialog
             document.getElementById("overlay").classList.add("show");
